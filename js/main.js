@@ -1,13 +1,10 @@
-// JavaScript opcional para interactividad adicional
-// Por ahora el sitio funciona completamente con HTML y CSS
-
+// Agregar al final de js/main.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll para los enlaces de navegación
+    // Smooth scroll para navegación
     const navLinks = document.querySelectorAll('.nav-menu a');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            // Solo para enlaces internos dentro de la misma página
             if (this.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
@@ -21,5 +18,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+    });
+    
+    // Scroll Reveal Animation (opcional)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+    
+    // Aplicar a elementos que quieras revelar al scroll
+    // (Opcional - puedes agregar clase .scroll-reveal a elementos en HTML)
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
     });
 });
