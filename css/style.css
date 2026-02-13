@@ -2179,3 +2179,228 @@ img {
         line-height: 1.5;
     }
 }
+
+/* ============================================
+   FIX: COLORES DE TEXTO EN TODAS LAS PÁGINAS
+   ============================================ */
+
+/* Asegurar que todo el texto sea visible */
+.content-section {
+    color: var(--gray-dark);
+}
+
+.content-section p,
+.content-section li {
+    color: var(--gray-medium);
+}
+
+.content-block p {
+    color: var(--gray-medium);
+}
+
+.content-block ul li {
+    color: var(--gray-medium);
+}
+
+/* History cards */
+.history-card p {
+    color: var(--gray-medium);
+}
+
+/* Academic cards */
+.academic-card p,
+.academic-card li {
+    color: var(--gray-medium);
+}
+
+/* International cards */
+.international-card p,
+.international-card li {
+    color: var(--gray-medium);
+}
+
+/* Tech area cards */
+.tech-area-card p,
+.tech-area-card li {
+    color: var(--gray-medium);
+}
+
+/* Research cards */
+.research-card p {
+    color: var(--gray-medium);
+}
+
+/* Project info */
+.project-info p {
+    color: var(--gray-medium);
+}
+
+/* Entrepreneurship cards */
+.entrepreneurship-card p {
+    color: var(--gray-medium);
+}
+
+/* Sector cards */
+.sector-card p {
+    color: var(--gray-medium);
+}
+
+/* Opportunity text */
+.opp-text p {
+    color: var(--gray-medium);
+}
+
+/* Achievement cards */
+.achievement-card p {
+    color: var(--gray-medium);
+}
+
+/* Rep category */
+.rep-category p {
+    color: var(--gray-medium);
+}
+
+/* Faculty feature */
+.faculty-feature p {
+    color: var(--gray-medium);
+}
+
+/* Faculty card */
+.faculty-title,
+.faculty-expertise,
+.faculty-degree {
+    color: var(--gray-medium);
+}
+
+/* Network item */
+.network-item p {
+    color: var(--gray-medium);
+}
+
+/* Transversal cards */
+.transversal-card p {
+    color: var(--gray-medium);
+}
+
+/* Profile competencies */
+.competency-item p {
+    color: var(--gray-medium);
+}
+
+/* Research line cards */
+.research-line-card p {
+    color: var(--gray-medium);
+}
+
+/* Lab cards */
+.lab-card p {
+    color: var(--gray-medium);
+}
+
+/* Accreditation text */
+.accreditation-text p,
+.accreditation-text li {
+    color: var(--gray-medium);
+}
+
+/* Asegurar contraste en fondos claros */
+.content-section h3,
+.content-section h4 {
+    color: var(--gray-dark);
+}
+
+/* Fix para strong tags */
+.content-section strong {
+    color: var(--gray-dark);
+}
+
+/* Pillar text en EIA seal */
+.pillar p {
+    color: var(--gray-light) !important;
+}
+
+/* CTA text */
+.cta p {
+    color: var(--gray-light) !important;
+}
+
+/* Page header text */
+.page-header p {
+    color: var(--gray-light) !important;
+}
+
+/* Hero description */
+.hero-description {
+    color: var(--gray-light) !important;
+}
+
+/* Asegurar que los párrafos en bloques blancos sean visibles */
+.content-block {
+    color: var(--gray-dark);
+}
+
+.content-block > p {
+    color: var(--gray-medium) !important;
+}
+
+/* Fix específico para listas */
+ul li {
+    color: var(--gray-medium);
+}
+
+/* Asegurar visibilidad en todos los contenedores */
+.history-card,
+.academic-card,
+.lab-card,
+.international-card,
+.tech-area-card,
+.transversal-card,
+.research-card,
+.entrepreneurship-card,
+.sector-card,
+.achievement-card,
+.rep-category,
+.faculty-card,
+.network-item,
+.opportunity-item,
+.competency-item,
+.research-line-card,
+.project-info {
+    color: var(--gray-dark);
+}
+
+/* Text dentro de proyecto showcase */
+.project-showcase p {
+    color: var(--gray-medium) !important;
+}
+
+/* Investigación */
+.research-areas p {
+    color: var(--gray-medium) !important;
+}
+
+/* Asegurar que los textos en fondos de gradiente sean legibles */
+.accreditation-block p,
+.accreditation-block li {
+    color: var(--gray-medium) !important;
+}
+
+/* Profile block */
+.profile-block p {
+    color: var(--gray-medium) !important;
+}
+
+/* Opportunities block */
+.opportunities-block p {
+    color: var(--gray-medium) !important;
+}
+
+/* Research focus */
+.research-focus p {
+    color: var(--gray-medium) !important;
+}
+
+/* Networks block */
+.networks-block p {
+    color: var(--gray-medium) !important;
+}
