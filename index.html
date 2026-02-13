@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingeniería Mecatrónica | Inicio</title>
+    <title>Ingeniería Mecatrónica EIA | Inicio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navegación -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">MECATRÓNICA</div>
+            <div class="logo">MECATRÓNICA EIA</div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="carrera.html">La Carrera</a></li>
@@ -23,70 +26,177 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="particles"></div>
         <div class="hero-content">
             <h1 class="hero-title">Ingeniería Mecatrónica</h1>
-            <p class="hero-subtitle">La convergencia perfecta entre mecánica, electrónica y computación</p>
+            <p class="hero-subtitle">Universidad EIA</p>
             <p class="hero-description">
-                Descubre la disciplina que impulsa la automatización industrial, la robótica avanzada 
-                y los sistemas inteligentes del futuro.
+                La integración perfecta entre mecánica de precisión, electrónica, control automático 
+                e informática para el diseño de productos y procesos inteligentes.
             </p>
-            <a href="carrera.html" class="btn-primary">Conoce más</a>
+            <a href="carrera.html" class="btn-primary">Conoce el programa</a>
         </div>
         <div class="hero-visual">
-            <div class="gear gear-1">⚙️</div>
-            <div class="gear gear-2">⚙️</div>
-            <div class="gear gear-3">⚙️</div>
+            <div class="circuit-board">
+                <div class="circuit-line line-1"></div>
+                <div class="circuit-line line-2"></div>
+                <div class="circuit-line line-3"></div>
+                <div class="circuit-node node-1"></div>
+                <div class="circuit-node node-2"></div>
+                <div class="circuit-node node-3"></div>
+            </div>
         </div>
     </section>
 
-    <!-- Características Destacadas -->
-    <section class="features">
+    <!-- Imagen Hero -->
+    <section class="hero-image-section">
         <div class="container">
-            <h2 class="section-title">¿Por qué Mecatrónica?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>Multidisciplinaria</h3>
-                    <p>Integra conocimientos de mecánica, electrónica, control automático y programación.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Alta Demanda</h3>
-                    <p>Una de las ingenierías más solicitadas en la industria 4.0 y automatización.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Innovación</h3>
-                    <p>Desarrolla soluciones tecnológicas que impactan múltiples sectores industriales.</p>
+            <div class="hero-image-wrapper">
+                <!-- RECOMENDACIÓN: Imagen de laboratorio de robótica con estudiantes trabajando -->
+                <div class="image-placeholder">
+                    <p>📸 Imagen recomendada: Estudiantes trabajando con brazo robótico industrial en el laboratorio</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Áreas de Aplicación -->
+    <!-- ¿Por qué Mecatrónica? -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">¿Por qué Ingeniería Mecatrónica en la EIA?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <circle cx="50" cy="50" r="40" fill="none" stroke="url(#gradient1)" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="25" fill="url(#gradient1)" opacity="0.3"/>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#7B2FF7;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Primer Programa en Antioquia</h3>
+                    <p>Pioneros en la región con un ecosistema de formación avanzada para la Cuarta Revolución Industrial.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <rect x="20" y="30" width="60" height="40" fill="none" stroke="url(#gradient2)" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="15" fill="url(#gradient2)" opacity="0.3"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#F7B731;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Acreditación de Alta Calidad</h3>
+                    <p>Programa e institución acreditados, garantizando excelencia académica y formación de clase mundial.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <polygon points="50,10 90,90 10,90" fill="none" stroke="url(#gradient3)" stroke-width="3"/>
+                            <circle cx="50" cy="60" r="20" fill="url(#gradient3)" opacity="0.3"/>
+                            <defs>
+                                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00F260;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0575E6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Proyección Internacional</h3>
+                    <p>Convenios de doble titulación en más de 10 países con universidades líderes mundiales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sello EIA -->
+    <section class="eia-seal">
+        <div class="container">
+            <div class="seal-content">
+                <h2>Sello Institucional EIA</h2>
+                <div class="seal-pillars">
+                    <div class="pillar">
+                        <div class="pillar-icon">SER</div>
+                        <h4>Ser</h4>
+                        <p>Formación integral del ingeniero como persona</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">SABER</div>
+                        <h4>Saber</h4>
+                        <p>Conocimiento técnico y científico de vanguardia</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">SERVIR</div>
+                        <h4>Servir</h4>
+                        <p>Orientación hacia el servicio de la sociedad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campos de Aplicación -->
     <section class="applications">
         <div class="container">
             <h2 class="section-title">Campos de Aplicación</h2>
             <div class="app-grid">
                 <div class="app-item">
                     <span class="app-number">01</span>
-                    <h4>Robótica Industrial</h4>
-                    <p>Diseño y programación de brazos robóticos para manufactura.</p>
+                    <h4>Industria Manufacturera</h4>
+                    <p>Automatización de procesos, sistemas CAD/CAM/CAE y PLM para producción inteligente.</p>
                 </div>
                 <div class="app-item">
                     <span class="app-number">02</span>
-                    <h4>Automatización</h4>
-                    <p>Sistemas de control para procesos industriales automatizados.</p>
+                    <h4>Tecnologías para la Salud</h4>
+                    <p>Cirugía robótica, biomecánica y dispositivos médicos inteligentes.</p>
                 </div>
                 <div class="app-item">
                     <span class="app-number">03</span>
-                    <h4>Vehículos Autónomos</h4>
-                    <p>Desarrollo de sistemas de navegación y control inteligente.</p>
+                    <h4>Energía y Sostenibilidad</h4>
+                    <p>Microgrids, bombas de calor y sistemas de energía renovable.</p>
                 </div>
                 <div class="app-item">
                     <span class="app-number">04</span>
-                    <h4>Biomecatrónica</h4>
-                    <p>Prótesis inteligentes y dispositivos médicos avanzados.</p>
+                    <h4>Robótica y Automatización</h4>
+                    <p>Brazos robóticos, sistemas autónomos y visión artificial.</p>
+                </div>
+                <div class="app-item">
+                    <span class="app-number">05</span>
+                    <h4>Transporte y Movilidad</h4>
+                    <p>Autotrónica, vehículos autónomos y sistemas inteligentes de transporte.</p>
+                </div>
+                <div class="app-item">
+                    <span class="app-number">06</span>
+                    <h4>Agrotrónica</h4>
+                    <p>Automatización agrícola e innovación en el sector agropecuario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imagen Laboratorios -->
+    <section class="image-section">
+        <div class="container">
+            <div class="image-grid">
+                <div class="image-item">
+                    <!-- RECOMENDACIÓN: Laboratorio de manufactura con CNC -->
+                    <div class="image-placeholder">
+                        <p>📸 Máquinas CNC en laboratorio de manufactura</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <!-- RECOMENDACIÓN: Estudiantes programando PLC -->
+                    <div class="image-placeholder">
+                        <p>📸 Estudiantes trabajando con PLCs</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,17 +204,18 @@
 
     <!-- Call to Action -->
     <section class="cta">
+        <div class="cta-background"></div>
         <div class="container">
-            <h2>¿Listo para explorar el futuro de la ingeniería?</h2>
-            <p>Descubre cómo la mecatrónica está transformando industrias completas</p>
-            <a href="proyectos.html" class="btn-secondary">Ver Proyectos</a>
+            <h2>¿Listo para transformar la industria?</h2>
+            <p>Descubre cómo formar parte de la revolución tecnológica</p>
+            <a href="carrera.html" class="btn-secondary">Explorar el programa</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Ingeniería Mecatrónica. Proyecto Educativo.</p>
+            <p>&copy; 2025 Ingeniería Mecatrónica - Universidad EIA. Todos los derechos reservados.</p>
         </div>
     </footer>
 
