@@ -303,95 +303,147 @@ img {
 }
 
 /* ============================================
-   HERO SECTION
+   HERO SECTION CON ANIMACIÓN ÉPICA
    ============================================ */
-.hero {
+   .hero {
     margin-top: 80px;
     min-height: 90vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #1A1D2E 0%, #2D1B4E 50%, #1A1D2E 100%);
-    background-size: 200% 200%;
-    animation: gradientShift 15s ease infinite;
+    background: linear-gradient(135deg, #0F1419 0%, #1A1D2E 25%, #2D1B4E 50%, #1A1D2E 75%, #0F1419 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
     color: var(--white);
     position: relative;
     overflow: hidden;
 }
 
-/* Partículas animadas */
+/* Grid de fondo tecnológico */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+/* Partículas mejoradas y expandidas */
 .particles {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
+/* Ondas de energía expansivas */
 .particles::before,
 .particles::after {
     content: '';
     position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--electric-blue);
+    width: 800px;
+    height: 800px;
+    border: 2px solid rgba(0, 217, 255, 0.2);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--electric-blue);
-    animation: particleFloat 15s linear infinite;
+    animation: expandWave 8s ease-out infinite;
 }
 
 .particles::before {
-    left: 20%;
-    animation-delay: 0s;
+    top: 20%;
+    left: -200px;
 }
 
 .particles::after {
-    left: 80%;
-    animation-delay: 7s;
+    bottom: 10%;
+    right: -200px;
+    animation-delay: 4s;
+    border-color: rgba(255, 107, 53, 0.2);
+}
+
+@keyframes expandWave {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
 
 .hero-content {
-    max-width: 600px;
-    z-index: 2;
+    max-width: 700px;
+    z-index: 10;
     padding: var(--spacing-lg) var(--spacing-md);
-    animation: fadeInLeft 1s ease 0.3s both;
+    animation: fadeInLeft 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
     margin-bottom: var(--spacing-sm);
     color: var(--white);
     animation: fadeInUp 1s ease 0.5s both;
-    text-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+    text-shadow: 
+        0 0 20px rgba(0, 217, 255, 0.6),
+        0 0 40px rgba(123, 47, 247, 0.4),
+        2px 2px 10px rgba(0, 0, 0, 0.8);
     line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
 .hero-subtitle {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-size: clamp(1.3rem, 3vw, 2rem);
     margin-bottom: var(--spacing-md);
     background: var(--gradient-neon);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: 600;
+    font-weight: 700;
     animation: fadeInUp 1s ease 0.7s both;
+    letter-spacing: 1px;
 }
 
 .hero-description {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    margin-bottom: var(--spacing-md);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: var(--spacing-lg);
     color: var(--gray-light);
     animation: fadeInUp 1s ease 0.9s both;
     line-height: 1.8;
+    max-width: 600px;
 }
 
-/* Visualización del hero con circuitos */
+/* ============================================
+   VISUALIZACIÓN ÉPICA DEL HERO
+   ============================================ */
 .hero-visual {
     position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 400px;
-    height: 400px;
-    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .circuit-board {
@@ -400,62 +452,313 @@ img {
     height: 100%;
 }
 
-.circuit-line {
+/* Red neuronal animada */
+.neural-network {
     position: absolute;
-    background: var(--gradient-electric);
-    opacity: 0.3;
-    border-radius: 2px;
+    width: 100%;
+    height: 100%;
 }
 
+/* Nodos de la red */
+.network-node {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--electric-blue);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 20px rgba(0, 217, 255, 0.8),
+        0 0 40px rgba(0, 217, 255, 0.4);
+    animation: nodePulse 3s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+}
+
+/* Posicionamiento de nodos */
+.network-node:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; }
+.network-node:nth-child(2) { top: 25%; left: 50%; animation-delay: 0.5s; background: var(--neon-orange); box-shadow: 0 0 20px rgba(255, 107, 53, 0.8); }
+.network-node:nth-child(3) { top: 35%; left: 75%; animation-delay: 1s; background: var(--deep-purple); box-shadow: 0 0 20px rgba(123, 47, 247, 0.8); }
+.network-node:nth-child(4) { top: 50%; left: 30%; animation-delay: 1.5s; background: var(--circuit-green); box-shadow: 0 0 20px rgba(0, 242, 96, 0.8); }
+.network-node:nth-child(5) { top: 60%; left: 60%; animation-delay: 2s; }
+.network-node:nth-child(6) { top: 70%; left: 40%; animation-delay: 2.5s; background: var(--bright-yellow); box-shadow: 0 0 20px rgba(247, 183, 49, 0.8); }
+.network-node:nth-child(7) { top: 80%; left: 70%; animation-delay: 3s; background: var(--neon-orange); box-shadow: 0 0 20px rgba(255, 107, 53, 0.8); }
+
+/* Líneas de conexión animadas */
+.circuit-line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 217, 255, 0.6) 20%, 
+        rgba(0, 217, 255, 0.8) 50%, 
+        rgba(0, 217, 255, 0.6) 80%, 
+        transparent
+    );
+    transform-origin: left center;
+    animation: lineFlow 3s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+@keyframes lineFlow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scaleX(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1.1);
+    }
+}
+
+/* Posicionamiento de líneas */
 .circuit-line.line-1 {
-    width: 200px;
-    height: 4px;
-    top: 100px;
-    left: 0;
-    animation: shimmer 3s linear infinite;
+    width: 300px;
+    top: 20%;
+    left: 15%;
+    transform: rotate(-15deg);
 }
 
 .circuit-line.line-2 {
-    width: 4px;
-    height: 150px;
-    top: 50px;
-    left: 150px;
-    animation: shimmer 4s linear infinite;
+    width: 250px;
+    top: 40%;
+    left: 25%;
+    transform: rotate(25deg);
+    animation-delay: 0.5s;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.6) 20%, rgba(255, 107, 53, 0.8) 50%, rgba(255, 107, 53, 0.6) 80%, transparent);
 }
 
 .circuit-line.line-3 {
-    width: 180px;
-    height: 4px;
-    top: 250px;
-    left: 50px;
-    animation: shimmer 5s linear infinite;
+    width: 280px;
+    top: 60%;
+    left: 20%;
+    transform: rotate(-5deg);
+    animation-delay: 1s;
+    background: linear-gradient(90deg, transparent, rgba(123, 47, 247, 0.6) 20%, rgba(123, 47, 247, 0.8) 50%, rgba(123, 47, 247, 0.6) 80%, transparent);
 }
 
+.circuit-line.line-4 {
+    width: 200px;
+    top: 75%;
+    left: 35%;
+    transform: rotate(15deg);
+    animation-delay: 1.5s;
+}
+
+/* Nodos de circuito grandes */
 .circuit-node {
     position: absolute;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 3px solid var(--electric-blue);
+    border-radius: 50%;
+    animation: nodeRotate 4s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuit-node::before {
+    content: '';
     width: 20px;
     height: 20px;
     background: var(--electric-blue);
     border-radius: 50%;
-    box-shadow: 0 0 20px var(--electric-blue);
-    animation: pulse 2s infinite;
+    box-shadow: 
+        0 0 20px rgba(0, 217, 255, 0.8),
+        0 0 40px rgba(0, 217, 255, 0.4),
+        inset 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: innerPulse 2s ease-in-out infinite;
+}
+
+@keyframes nodeRotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+        border-color: var(--electric-blue);
+    }
+    33% {
+        border-color: var(--neon-orange);
+    }
+    66% {
+        border-color: var(--deep-purple);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        border-color: var(--electric-blue);
+    }
+}
+
+@keyframes innerPulse {
+    0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 
 .circuit-node.node-1 {
-    top: 90px;
-    left: -10px;
+    top: 10%;
+    right: 30%;
 }
 
 .circuit-node.node-2 {
-    top: 50px;
-    left: 140px;
-    animation-delay: 0.5s;
+    top: 45%;
+    right: 15%;
+    animation-delay: 1s;
 }
 
 .circuit-node.node-3 {
-    top: 240px;
-    left: 40px;
-    animation-delay: 1s;
+    bottom: 20%;
+    right: 40%;
+    animation-delay: 2s;
+}
+
+/* Hexágonos flotantes */
+.floating-hex {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(123, 47, 247, 0.1));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: hexFloat 6s ease-in-out infinite;
+    border: 2px solid rgba(0, 217, 255, 0.3);
+}
+
+@keyframes hexFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+        opacity: 0.6;
+    }
+}
+
+.floating-hex:nth-child(1) {
+    top: 20%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.floating-hex:nth-child(2) {
+    top: 60%;
+    right: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 2s;
+    animation-duration: 8s;
+}
+
+.floating-hex:nth-child(3) {
+    bottom: 15%;
+    right: 50%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 4s;
+    animation-duration: 10s;
+}
+
+/* Partículas de datos */
+.data-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--electric-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--electric-blue);
+    animation: dataFlow 15s linear infinite;
+}
+
+@keyframes dataFlow {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-100vw, 50vh);
+        opacity: 0;
+    }
+}
+
+.data-particle:nth-child(1) {
+    top: 15%;
+    right: 0;
+    animation-delay: 0s;
+}
+
+.data-particle:nth-child(2) {
+    top: 35%;
+    right: 0;
+    animation-delay: 3s;
+    background: var(--neon-orange);
+    box-shadow: 0 0 8px var(--neon-orange);
+}
+
+.data-particle:nth-child(3) {
+    top: 55%;
+    right: 0;
+    animation-delay: 6s;
+    background: var(--deep-purple);
+    box-shadow: 0 0 8px var(--deep-purple);
+}
+
+.data-particle:nth-child(4) {
+    top: 75%;
+    right: 0;
+    animation-delay: 9s;
+    background: var(--circuit-green);
+    box-shadow: 0 0 8px var(--circuit-green);
+}
+
+.data-particle:nth-child(5) {
+    top: 25%;
+    right: 0;
+    animation-delay: 12s;
+    background: var(--bright-yellow);
+    box-shadow: 0 0 8px var(--bright-yellow);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-visual {
+        width: 40%;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+    }
+    
+    .hero-visual {
+        width: 100%;
+        opacity: 0.3;
+        right: -20%;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
 }
 
 /* ============================================
