@@ -1,5 +1,10 @@
 /* ============================================
-   RESET Y VARIABLES
+   IMPORTAR TIPOGRAFÍA SAIRA
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============================================
+   RESET Y VARIABLES ACTUALIZADAS
    ============================================ */
 * {
     margin: 0;
@@ -29,8 +34,8 @@
     --black: #0F1419;
     --white: #FFFFFF;
     
-    /* Tipografía */
-    --font-heading: 'Orbitron', sans-serif;
+    /* Tipografía ACTUALIZADA */
+    --font-heading: 'Saira', sans-serif;
     --font-body: 'Inter', sans-serif;
     
     /* Espaciado */
