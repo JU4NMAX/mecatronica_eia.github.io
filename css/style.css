@@ -3905,14 +3905,14 @@ ul li {
     align-items: center;
     gap: 1rem;
     padding: 1.2rem 2.5rem;
-    background: linear-gradient(135deg, #7B2FF7, #9C27B0);
+    background: linear-gradient(135deg, #00F260, #0575E6);
     color: var(--white);
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.1rem;
     border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 8px 25px rgba(123, 47, 247, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 242, 96, 0.4);
     transition: var(--transition-slow);
     position: relative;
     overflow: hidden;
